@@ -1,0 +1,358 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+:root {
+    --softred: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --darkmoderatecyan: hsl(168, 34%, 41%);
+    --darkdesaturatedcyan: hsl(167, 40%, 24%);
+    --darkblue: hsl(198, 62%, 26%);
+    --verydarkdesatblue: hsl(212, 27%, 19%);
+    --Verydarkgrayishblue: hsl(213, 9%, 39%);
+    --darkgrayishblue: hsl(232, 10%, 55%);
+    --grayishblue: hsl(210, 4%, 67%);
+}
+
+h1,h2,h3 {
+    color: blue;
+    font-size: 5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+li {
+    list-style: none;
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/** Header **/
+header {
+    width: 100%;
+    height: 80vh;
+    /** poner imagen de la naranja, para salir se pone ../**/
+    background-image: url(../img/image-header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header-content{
+    display: flex ;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+/**Navbar**/
+.navbar{
+    display: flex;
+    /** ancho**/
+    width: 100%;    
+    /** tamaño*/
+    height: 100px; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu ul {
+    display: flex;
+}
+
+.menu ul li a:hover{
+    color: aqua;
+}
+button{
+    padding:17px 25px;
+    border-radius: 50px;
+    border: none;
+    color: aquamarine;
+    margin-left: 30px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.75rem;
+}
+button:hover{
+    background-color: brown;
+    color: blue;
+}
+/** cuerpo **/
+.brand-content{
+display: flex;
+width: 100%;
+}
+.brand-content .left, 
+.brand-content .right{
+flex: 1;
+}
+.brand-content .right img {
+    width: 100%;
+    height: 100%;
+}
+.brand-content .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.brand-content .h2{
+    padding-left: 100%;
+    max-width: 80%;
+    color: var(--Verydarkgrayishblue);
+    font-size: 42%;
+}
+.brand-content p{
+    padding-left:100px ;
+    max-width: 85%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: var(--grayishblue);
+    font-size: 1rem;
+    line-height: 1.7;
+
+}
+.brand-content a{
+    color: var(--verydarkdesatblue);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-family: monospace;
+    padding-left: 100px;
+
+}
+.brand-content a:hover{
+    text-decoration: underline var(--yellow) 7px;
+}
+
+.brand-content a::after{
+    content:"" ;
+    width: 100;
+    border-bottom:  8px solid yellowgreen;
+    position: absolute;
+    bottom: 8px;
+    left: 0px;
+    z-index: -1;
+    border-radius: 10px;
+    opacity: .6;
+}
+
+/** Audience **/
+.audience-content{
+    display: flex;
+    width: 1005;
+}
+
+.audience-content .left,
+.audience-content .right{
+flex: 1;
+}
+.audience-content .left img{
+    width: 100%;
+    height: 100%;
+}
+.audience-content .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.audience-content h2{
+    padding-left: 100px;
+    max-width: 80%;
+    color: var(--verydarkdesatblue);
+    font-size: 42px;
+}
+.audience-content p{
+    padding-left: 100px;
+    max-width: 85%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: var(--grayishblue);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+.audience-content a {
+    padding-left: 100px ;
+    color: var(--verydarkdesatblue);
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'fraunces', serif;
+    
+}
+.graphic-content{
+    display: flex ;
+
+}
+.graphic-content .left,
+.graphic-content .right{
+position: relative;
+flex: 0 0 50%;
+}
+.graphic-content .left img,
+.graphic-content .right img{
+    width: 100%;
+}
+.graphic-content .left h3,
+.graphic-content .right h3{
+    font-size: 27px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.graphic-content .left p,
+.graphic-content .right p{
+    padding-top: 20px ;
+    max-width: 70%;
+    text-align: center;
+    line-height: 25px;
+}
+.graphic-content-description{
+    position: absolute;
+    bottom: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.testimonials{
+    padding: 100px 0px;
+}
+.testimonials h3{
+    color: var(--darkgrayishblue);
+    text-align: center;
+    margin-bottom:  40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+.clients{
+    display: flex; 
+}
+.Box{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+}
+.Box p{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--Verydarkgrayishblue);
+    padding: 40px 0px;
+    max-width: 75%;
+    line-height: 32px;
+}
+.Box img{
+    border-radius: 50%;
+}
+.name{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.profesion{
+    color: var(--Verydarkgrayishblue);
+    font-size: 0.8rem;
+    padding-top: 5px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.gallery img{
+    width:100%;
+}
+footer{
+    background-color: var(--darkmoderatecyan);
+}
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+    color: black;
+}
+.footer-content .menu{
+    padding: 25px 0px 60px 0px;
+}
+.footer-content .menu ul li a{
+    color: var(--darkdesaturatedcyan);
+}
+.socials img{
+    margin-left: 10px;
+}
+
+/* Media Queries Tablet*/
+@media screen and (max-width: 810px){
+    header{
+        width: 100%;
+        height: 80%;
+        background-image: url(../img/mobile/image-header.jpg );
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+
+    .header-content h1{
+    font-size: 38px;
+    text-align: center;
+    }
+    .header-content img{
+    margin-top: 4rem;
+    width: 37px;
+    }
+    .navbar{
+        padding: 0px 20px;
+        position: relative;
+        text-align: center;
+    }
+    .navbar .menu{
+        position: absolute;
+        display: block;
+        top: 100px;
+        left: 0;
+        right: 0;
+        background-color: #25a6e2;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+
+    }
+    .navbar .menu ul{
+        flex-direction: column;
+    }
+    .navbar .menu ul li a{
+        color: white;
+    }
+    .navbar .menu ul li a:hover{
+        color: black;
+    }
+    .toggle{
+        display: block;
+        cursor: pointer;
+    }
+}
+    
+    
